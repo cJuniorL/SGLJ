@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SGLJ.Camadas.Modelo
 {
-    public class Cidade
+    public class Tipo_Produtos
     {
         public int id { get; set; }
-        public string nome { get; set; }
+        public string descr { get; set; }
+
     }
 }
