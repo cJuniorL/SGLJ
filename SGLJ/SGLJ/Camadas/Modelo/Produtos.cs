@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace SGLJ.Camadas.Modelo
 {
-    class Produtos
+    public class Produtos
     {
+        public int id { get; set; }
+        public int idTipo_Produto { get; set; }
+        public string descr { get; set; }
+        public int quantidade { get; set; }
+        public float valor { get; set; }
     }
 }
