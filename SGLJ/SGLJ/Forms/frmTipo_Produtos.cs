@@ -29,6 +29,12 @@ namespace SGLJ.Forms
         private void habilitarCampos(bool status)
         {
             txtDescr.Enabled = status;
+            btnInserir.Enabled = !status;
+            btnEditar.Enabled = !status;
+            btnGravar.Enabled = status;
+            btnRemover.Enabled = !status;
+            btnCancelar.Enabled = status;
+            dgvTipoProdutos.Enabled = !status;
             if (op != 'E')
             {
                 lblID.Text = "-1";
@@ -60,9 +66,9 @@ namespace SGLJ.Forms
                 if (result == DialogResult.Yes)
                 {
                     op = 'X';
-                    Camadas.BLL.Cidade bllCidades = new Camadas.BLL.Cidade();
-                    bllCidades.Delete(bllCidades.SelectById(Convert.ToInt32(lblID.Text)));
-                    dgvTipoProdutos.DataSource = bllCidades.Select();
+                    Camadas.BLL.Tipo_Produtos bllTipoProdutos = new Camadas.BLL.Tipo_Produtos();
+                    bllTipoProdutos.Delete(bllTipoProdutos.SelectById(Convert.ToInt32(lblID.Text)));
+                    dgvTipoProdutos.DataSource = bllTipoProdutos.Select();
                     habilitarCampos(false);
                 }
             }
@@ -71,7 +77,7 @@ namespace SGLJ.Forms
         private void btnGravar_Click(object sender, EventArgs e)
         {
             DialogResult result;
-            result = MessageBox.Show("Deseja Gravar o este Tipo de Produto?", "Gravar Tipo de Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            result = MessageBox.Show("Deseja Gravar este Tipo de Produto?", "Gravar Tipo de Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             if (result == DialogResult.Yes)
             {
                 Camadas.BLL.Tipo_Produtos bllTipoProdutos = new Camadas.BLL.Tipo_Produtos();
@@ -105,6 +111,7 @@ namespace SGLJ.Forms
             if (dgvTipoProdutos.SelectedRows.Count > 0)
             {
                 lblID.Text = dgvTipoProdutos.SelectedRows[0].Cells["id"].Value.ToString();
+                txtDescr.Text = dgvTipoProdutos.SelectedRows[0].Cells["descr"].Value.ToString();
             }
         }
     }

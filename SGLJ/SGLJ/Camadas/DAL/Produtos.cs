@@ -61,7 +61,7 @@ namespace SGLJ.Camadas.DAL
                 {
                     produtos.id = Convert.ToInt32(reader["id"]);
                     produtos.descr = reader["descr"].ToString();
-                    produtos.idTipo_Produto = Convert.ToInt32(reader["idTipo_Produto"]);
+                    produtos.idTipo_Produto = Convert.ToInt32(reader["idTipo_Produtos"]);
                     produtos.quantidade = Convert.ToInt32(reader["quantidade"]);
                     produtos.valor = Convert.ToSingle(reader["valor"]);
                 }
@@ -81,9 +81,9 @@ namespace SGLJ.Camadas.DAL
         public void Insert(Modelo.Produtos produtos)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Insert into Produtos values (@idTipo_Produto, @descr, @quantidade, @valor)";
+            string sql = "Insert into Produtos values (@idTipo_Produtos, @descr, @quantidade, @valor)";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@idTipo_Produto", produtos.idTipo_Produto);
+            cmd.Parameters.AddWithValue("@idTipo_Produtos", produtos.idTipo_Produto);
             cmd.Parameters.AddWithValue("@descr", produtos.descr);
             cmd.Parameters.AddWithValue("@quantidade", produtos.quantidade);
             cmd.Parameters.AddWithValue("@valor", produtos.valor);
@@ -107,7 +107,7 @@ namespace SGLJ.Camadas.DAL
             SqlConnection conexao = new SqlConnection(strCon);
             string sql = "Update Produtos set descr=@descr, quantidade=@quantidade, valor=@valor where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@idTipo_Produto", produtos.idTipo_Produto);
+            cmd.Parameters.AddWithValue("@idTipo_Produtos", produtos.idTipo_Produto);
             cmd.Parameters.AddWithValue("@descr", produtos.descr);
             cmd.Parameters.AddWithValue("@quantidade", produtos.quantidade);
             cmd.Parameters.AddWithValue("@valor", produtos.valor);

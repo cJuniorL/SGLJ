@@ -49,5 +49,12 @@ namespace SGLJ.Forms
             frmVendedores.MdiParent = this;
             frmVendedores.Show(); 
         }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProdutos frmProdutos = new frmProdutos();
+            frmProdutos.MdiParent = this;
+            frmProdutos.Show();
+        }
     }
 }
