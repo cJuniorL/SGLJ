@@ -103,6 +103,7 @@ namespace SGLJ.Camadas.DAL
             string sql = "Update Cidades set nome=@nome, uf=@uf where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@id", cidade.id);
+            cmd.Parameters.AddWithValue("@nome", cidade.nome);
             cmd.Parameters.AddWithValue("@uf", cidade.uf);
             conexao.Open();
             try

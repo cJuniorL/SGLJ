@@ -94,6 +94,7 @@ namespace SGLJ.Forms
                     bllCidades.Update(cidade);
                 op = 'X';
                 habilitarCampos(false);
+                dgvCidades.DataSource = bllCidades.Select();
             }
         }
 
