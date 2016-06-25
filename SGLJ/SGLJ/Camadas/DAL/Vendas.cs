@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SGLJ.Camadas.DLL
+namespace SGLJ.Camadas.DAL
 {
-    class Produtos_Vendas
+    class Vendas
     {
     }
 }
