@@ -47,7 +47,6 @@ namespace SGLJ.Camadas.DAL
         public Modelo.Cidade SelectById(int id)
         {
             Modelo.Cidade cidade = new Modelo.Cidade();
-            List<Modelo.Cidade> lstCidade = new List<Modelo.Cidade>();
             SqlConnection conexao = new SqlConnection(strCon);
             string sql = "Select * from Cidades where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);

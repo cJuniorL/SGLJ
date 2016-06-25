@@ -10,6 +10,7 @@ namespace SGLJ.Camadas.Modelo
     {
         public int id { get; set; }
         public int idCidade { get; set; }
+        public string nome { get; set; }
         public string telefone { get; set; }
         public string celular { get; set; }
         public string endereco { get; set; }
