@@ -71,8 +71,9 @@
             this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalario.Location = new System.Drawing.Point(116, 366);
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(164, 28);
+            this.txtSalario.Size = new System.Drawing.Size(126, 28);
             this.txtSalario.TabIndex = 53;
+            this.txtSalario.Leave += new System.EventHandler(this.txtSalario_Leave);
             // 
             // txtEndereco
             // 

@@ -117,7 +117,7 @@ namespace SGLJ.Camadas.DAL
         public void Update(Modelo.Vendedores vendedor)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Update Clientes set idCidade=@idCidade, nome=@nome, telefone=@telefone, celular=@celular, endereco=@endereco, rg=@rg ,cpf=@cpf, salario=@salario where id=@id;";
+            string sql = "Update Vendedores set idCidade=@idCidade, nome=@nome, telefone=@telefone, celular=@celular, endereco=@endereco, rg=@rg ,cpf=@cpf, salario=@salario where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@id", vendedor.id);
             cmd.Parameters.AddWithValue("@idCidade", vendedor.idCidade);

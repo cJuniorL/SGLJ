@@ -140,7 +140,14 @@ namespace SGLJ.Forms
                 vendedor.endereco = txtEndereco.Text;
                 vendedor.cpf = txtCpf.Text;
                 vendedor.rg = txtRg.Text;
-                vendedor.salario = Convert.ToSingle(txtSalario.Text);
+                try
+                {
+                    vendedor.salario = Convert.ToSingle(txtSalario.Text.Replace("R", "").Replace("$", ""));
+                }
+                catch
+                {
+                    vendedor.salario = 0;
+                }
                 if (op == 'I')
                     bllVendedore.Insert(vendedor);
                 else
@@ -165,6 +172,18 @@ namespace SGLJ.Forms
                 cmbCidade.SelectedValue = vendedores.idCidade;
                 txtEndereco.Text = vendedores.endereco;
                 txtSalario.Text = String.Format("{0:C2}", vendedores.salario);
+            }
+        }
+
+        private void txtSalario_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                txtSalario.Text = String.Format("{0:C2}", Convert.ToDouble(txtSalario.Text.Replace("R", "").Replace("$", "")));
+            }
+            catch
+            {
+                txtSalario.Text = "";
             }
         }
     }
