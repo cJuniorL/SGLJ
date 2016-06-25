@@ -46,10 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camadas\BLL\Cidade.cs" />
+    <Compile Include="Camadas\BLL\Clientes.cs" />
+    <Compile Include="Camadas\BLL\Produtos.cs" />
+    <Compile Include="Camadas\BLL\Produtos_Vendas.cs" />
+    <Compile Include="Camadas\BLL\Tipo_Produtos.cs" />
+    <Compile Include="Camadas\BLL\Vendas.cs" />
+    <Compile Include="Camadas\BLL\Vendedores.cs" />
+    <Compile Include="Camadas\DLL\Cidades.cs" />
+    <Compile Include="Camadas\DLL\Clientes.cs" />
+    <Compile Include="Camadas\DLL\Produtos.cs" />
+    <Compile Include="Camadas\DLL\Produtos_Vendas.cs" />
+    <Compile Include="Camadas\DLL\Tipo_Produtos.cs" />
+    <Compile Include="Camadas\DLL\Vendas.cs" />
+    <Compile Include="Camadas\DLL\Vendedores.cs" />
     <Compile Include="Camadas\Modelo\Cidade.cs" />
     <Compile Include="Camadas\Modelo\Clientes.cs" />
     <Compile Include="Camadas\Modelo\Produtos.cs" />
-    <Compile Include="Camadas\Modelo\Produtos_vendas.cs" />
+    <Compile Include="Camadas\Modelo\Produtos_Vendas.cs" />
     <Compile Include="Camadas\Modelo\Tipo_Produtos.cs" />
     <Compile Include="Camadas\Modelo\Vendas.cs" />
     <Compile Include="Camadas\Modelo\Vendedores.cs" />
@@ -59,10 +73,67 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCidade.Designer.cs">
+      <DependentUpon>frmCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProdutos.Designer.cs">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProdutos_Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProdutos_Vendas.Designer.cs">
+      <DependentUpon>frmProdutos_Vendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTipo_Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTipo_Produtos.Designer.cs">
+      <DependentUpon>frmTipo_Produtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVendedores.Designer.cs">
+      <DependentUpon>frmVendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCidade.resx">
+      <DependentUpon>frmCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVendedores.resx">
+      <DependentUpon>frmVendedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,10 +157,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Camadas\BLL\" />
-    <Folder Include="Camadas\DLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
