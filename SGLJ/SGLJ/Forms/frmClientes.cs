@@ -26,8 +26,27 @@ namespace SGLJ.Forms
             cmbCidade.ValueMember = "id";
             cmbCidade.DisplayMember = "nome";
             cmbCidade.DataSource = bllCidade.Select();
-            dgvClientes.DataSource = bllCliente.Select();
+            carregarGrid();
             habilitarCampos(false);
+        }
+
+        private void carregarGrid()
+        {
+            Camadas.BLL.Cidade bllCidade = new Camadas.BLL.Cidade();
+            Camadas.BLL.Clientes bllCliente = new Camadas.BLL.Clientes();
+            var dados = from c in bllCliente.Select()
+                        select new
+                        {
+                            id = c.id,
+                            nome = c.nome,
+                            cidade = bllCidade.SelectById(c.idCidade).nome,
+                            endereco = c.endereco,
+                            telefone = c.telefone,
+                            celular = c.celular,
+                            cpf = c.cpf,
+                            email = c.email
+                         };
+            dgvClientes.DataSource = dados.ToList();
         }
 
         private void habilitarCampos(bool status)
@@ -47,6 +66,7 @@ namespace SGLJ.Forms
             cmbCidade.Enabled = status;
             if (op != 'E')
             {
+                lblID.Text = "-1";
                 txtNome.Text = "";
                 txtCpf.Text = "";
                 txtEmail.Text = "";
@@ -80,7 +100,7 @@ namespace SGLJ.Forms
                     op = 'X';
                     Camadas.BLL.Clientes bllClientes = new Camadas.BLL.Clientes();
                     bllClientes.Delete(bllClientes.SelectById(Convert.ToInt32(lblID.Text)));
-                    dgvClientes.DataSource = bllClientes.Select();
+                    carregarGrid();
                     habilitarCampos(false);
                 }
             }
@@ -120,7 +140,7 @@ namespace SGLJ.Forms
                     bllCliente.Update(clientes);
                 op = 'X';
                 habilitarCampos(false);
-                dgvClientes.DataSource = bllCliente.Select();
+                carregarGrid();
             }
         }
 

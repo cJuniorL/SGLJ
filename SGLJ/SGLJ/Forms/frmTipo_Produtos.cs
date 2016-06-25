@@ -71,7 +71,7 @@ namespace SGLJ.Forms
         private void btnGravar_Click(object sender, EventArgs e)
         {
             DialogResult result;
-            result = MessageBox.Show("Deseja Gravar o Tipo_Produto?", "Gravar Tipo_Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            result = MessageBox.Show("Deseja Gravar o este Tipo de Produto?", "Gravar Tipo de Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             if (result == DialogResult.Yes)
             {
                 Camadas.BLL.Tipo_Produtos bllTipoProdutos = new Camadas.BLL.Tipo_Produtos();
