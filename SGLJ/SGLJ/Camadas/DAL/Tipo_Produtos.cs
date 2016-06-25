@@ -96,7 +96,7 @@ namespace SGLJ.Camadas.DAL
         public void Update(Modelo.Tipo_Produtos tipoProdutos)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Update Tipo_Produtos set descr=@descr, where id=@id";
+            string sql = "Update Tipo_Produtos set descr=@descr where id=@id";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@id", tipoProdutos.id);
             cmd.Parameters.AddWithValue("@descr", tipoProdutos.descr);

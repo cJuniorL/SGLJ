@@ -59,14 +59,14 @@ namespace SGLJ.Forms
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            habilitarCampos(true);
             op = 'I';
+            habilitarCampos(true);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            habilitarCampos(false);
             op = 'E';
+            habilitarCampos(true);
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace SGLJ.Forms
             if (Convert.ToInt32(lblID.Text) > 0)
             {
                 DialogResult result;
-                result = MessageBox.Show("Deseja Remover Esse CLiente?", "Remover Cidade", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                result = MessageBox.Show("Deseja Remover Esse Cliente?", "Remover Cidade", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                 if (result == DialogResult.Yes)
                 {
                     op = 'X';

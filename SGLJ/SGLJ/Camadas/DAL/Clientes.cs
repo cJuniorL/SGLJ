@@ -116,6 +116,7 @@ namespace SGLJ.Camadas.DAL
             SqlConnection conexao = new SqlConnection(strCon);
             string sql = "Update Clientes set idCidade=@idCidade, nome=@nome, telefone=@telefone, celular=@celular, endereco=@endereco, cpf=@cpf, email=@email where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", cliente.id);
             cmd.Parameters.AddWithValue("@idCidade", cliente.idCidade);
             cmd.Parameters.AddWithValue("@nome", cliente.nome);
             cmd.Parameters.AddWithValue("@telefone", cliente.telefone);
