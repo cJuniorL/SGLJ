@@ -43,9 +43,9 @@ namespace SGLJ.Camadas.DAL
             return lstTipoProdutos;
         }
 
-        public List<Modelo.Tipo_Produtos> SelectById(int id)
+        public Modelo.Tipo_Produtos SelectById(int id)
         {
-            List<Modelo.Tipo_Produtos> lstTipoProdutos = new List<Modelo.Tipo_Produtos>();
+            Modelo.Tipo_Produtos tipoProdutos = new Modelo.Tipo_Produtos();
             SqlConnection conexao = new SqlConnection(strCon);
             string sql = "Select * from Tipo_Produtos where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
@@ -56,10 +56,8 @@ namespace SGLJ.Camadas.DAL
                 SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
-                    Modelo.Tipo_Produtos tipoProdutos = new Modelo.Tipo_Produtos();
                     tipoProdutos.id = Convert.ToInt32(reader[0].ToString());
                     tipoProdutos.descr = reader["descr"].ToString();
-                    lstTipoProdutos.Add(tipoProdutos);
                 }
             }
             catch
@@ -71,7 +69,7 @@ namespace SGLJ.Camadas.DAL
                 conexao.Close();
             }
 
-            return lstTipoProdutos;
+            return tipoProdutos;
         }
 
         public void Insert(Modelo.Tipo_Produtos tipoProdutos)

@@ -28,5 +28,12 @@ namespace SGLJ.Forms
         {
 
         }
+
+        private void tipoDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTipo_Produtos frmTipoProdutos = new frmTipo_Produtos();
+            frmTipoProdutos.MdiParent = this;
+            frmTipoProdutos.Show();
+        }
     }
 }

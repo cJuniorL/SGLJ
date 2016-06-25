@@ -15,7 +15,7 @@ namespace SGLJ.Camadas.BLL
             return dalCli.Select();
         }
 
-        public List<Modelo.Tipo_Produtos> SelectById(int id)
+        public Modelo.Tipo_Produtos SelectById(int id)
         {
             DAL.Tipo_Produtos dalTipoProdutos = new DAL.Tipo_Produtos();
 
