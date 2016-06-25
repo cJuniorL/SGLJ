@@ -12,11 +12,6 @@ namespace SGLJ.Forms
 {
     public partial class frmProdutos : Form
     {
-        //public int id { get; set; }
-        //public int idTipo_Produto { get; set; }
-        //public string descr { get; set; }
-        //public int quantidade { get; set; }
-        //public float valor { get; set; }
 
         char op = 'X';
 
