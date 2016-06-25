@@ -55,6 +55,7 @@
     <Compile Include="Camadas\BLL\Vendedores.cs" />
     <Compile Include="Camadas\DAL\Cidades.cs" />
     <Compile Include="Camadas\DAL\Clientes.cs" />
+    <Compile Include="Camadas\DAL\Conexao.cs" />
     <Compile Include="Camadas\DAL\Produtos.cs" />
     <Compile Include="Camadas\DAL\Produtos_Vendas.cs" />
     <Compile Include="Camadas\DAL\Tipo_Produtos.cs" />
