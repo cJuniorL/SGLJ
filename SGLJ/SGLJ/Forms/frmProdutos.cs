@@ -23,6 +23,10 @@ namespace SGLJ.Forms
         private void frmProdutos_Load(object sender, EventArgs e)
         {
             Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
+            Camadas.BLL.Tipo_Produtos bllTipo_Produtos = new Camadas.BLL.Tipo_Produtos();
+            cmbTipo.ValueMember = "id";
+            cmbTipo.DisplayMember = "descr";
+            cmbTipo.DataSource = bllTipo_Produtos.Select();
             dgvProdutos.DataSource = bllProdutos.Select();
             habilitarCampos(false);
         }
@@ -32,6 +36,7 @@ namespace SGLJ.Forms
             txtDescr.Enabled = status;
             txtQuantidade.Enabled = status;
             txtValor.Enabled = status;
+            cmbTipo.Enabled = status;
             btnInserir.Enabled = !status;
             btnEditar.Enabled = !status;
             btnGravar.Enabled = status;
@@ -41,7 +46,7 @@ namespace SGLJ.Forms
             if (op != 'E')
             {
                 lblID.Text = "-1";
-                lblIDTipoProdutos.Text = "-1";
+                cmbTipo.Text = "";
                 txtDescr.Text = "";
                 txtQuantidade.Text = "";
                 txtValor.Text = "";
@@ -91,7 +96,7 @@ namespace SGLJ.Forms
                 Camadas.Modelo.Produtos produtos = new Camadas.Modelo.Produtos();
                 if (op == 'E')
                     produtos = bllProdutos.SelectById(Convert.ToInt32(lblID.Text));
-                produtos.idTipo_Produto = Convert.ToInt32(lblIDTipoProdutos.Text);
+                produtos.idTipo_Produto = Convert.ToInt32(cmbTipo.SelectedValue);
                 produtos.descr = txtDescr.Text;
                 produtos.quantidade = Convert.ToInt32(txtQuantidade.Text);
                 produtos.valor = Convert.ToSingle(txtValor.Text);
@@ -124,7 +129,6 @@ namespace SGLJ.Forms
                 txtDescr.Text = dgvProdutos.SelectedRows[0].Cells["descr"].Value.ToString();
                 txtQuantidade.Text = dgvProdutos.SelectedRows[0].Cells["quantidade"].Value.ToString();
                 txtValor.Text = dgvProdutos.SelectedRows[0].Cells["valor"].Value.ToString();
-
             }
         }
     }

@@ -73,7 +73,7 @@ namespace SGLJ.Forms
                 txtEndereco.Text = "";
                 txtCelular.Text = "";
                 txtTelefone.Text = "";
-                cmbCidade.Text = "";
+                cmbCidade.SelectedText = "";
             }
         }
 
