@@ -75,7 +75,7 @@
             this.btnVendedores.Location = new System.Drawing.Point(9, 12);
             this.btnVendedores.Name = "btnVendedores";
             this.btnVendedores.Size = new System.Drawing.Size(109, 46);
-            this.btnVendedores.TabIndex = 3;
+            this.btnVendedores.TabIndex = 1;
             this.btnVendedores.Text = "Vendedores";
             this.btnVendedores.UseVisualStyleBackColor = true;
             this.btnVendedores.Click += new System.EventHandler(this.btnVendedores_Click);
@@ -86,7 +86,7 @@
             this.btnVendas.Location = new System.Drawing.Point(9, 180);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(109, 46);
-            this.btnVendas.TabIndex = 2;
+            this.btnVendas.TabIndex = 4;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
@@ -97,7 +97,7 @@
             this.btnClientes.Location = new System.Drawing.Point(9, 122);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(109, 46);
-            this.btnClientes.TabIndex = 1;
+            this.btnClientes.TabIndex = 3;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
@@ -108,7 +108,7 @@
             this.btnProdutos.Location = new System.Drawing.Point(9, 64);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(109, 46);
-            this.btnProdutos.TabIndex = 0;
+            this.btnProdutos.TabIndex = 2;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);

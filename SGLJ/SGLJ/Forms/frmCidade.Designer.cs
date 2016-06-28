@@ -52,9 +52,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 24);
+            this.label1.Location = new System.Drawing.Point(38, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 44);
+            this.label1.Size = new System.Drawing.Size(124, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cidades";
             // 
@@ -62,9 +63,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 173);
+            this.label2.Location = new System.Drawing.Point(28, 141);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 24);
+            this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome:";
             // 
@@ -72,9 +74,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(589, 173);
+            this.label4.Location = new System.Drawing.Point(442, 141);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 24);
+            this.label4.Size = new System.Drawing.Size(32, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "UF:";
             // 
@@ -82,18 +85,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 124);
+            this.label3.Location = new System.Drawing.Point(54, 101);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 24);
+            this.label3.Size = new System.Drawing.Size(26, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "ID:";
             // 
             // lblID
             // 
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(116, 124);
+            this.lblID.Location = new System.Drawing.Point(87, 101);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(102, 24);
+            this.lblID.Size = new System.Drawing.Size(76, 20);
             this.lblID.TabIndex = 5;
             // 
             // dgvCidades
@@ -103,10 +108,11 @@
             this.ID,
             this.Nome,
             this.UF});
-            this.dgvCidades.Location = new System.Drawing.Point(114, 446);
+            this.dgvCidades.Location = new System.Drawing.Point(86, 362);
+            this.dgvCidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCidades.Name = "dgvCidades";
             this.dgvCidades.RowTemplate.Height = 24;
-            this.dgvCidades.Size = new System.Drawing.Size(1024, 150);
+            this.dgvCidades.Size = new System.Drawing.Size(768, 122);
             this.dgvCidades.TabIndex = 6;
             this.dgvCidades.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCidades_CellMouseDoubleClick);
             // 
@@ -134,10 +140,11 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(834, 383);
+            this.btnCancelar.Location = new System.Drawing.Point(626, 311);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(127, 43);
-            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Size = new System.Drawing.Size(95, 35);
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -145,10 +152,11 @@
             // btnInserir
             // 
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(126, 383);
+            this.btnInserir.Location = new System.Drawing.Point(94, 311);
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(127, 43);
-            this.btnInserir.TabIndex = 7;
+            this.btnInserir.Size = new System.Drawing.Size(95, 35);
+            this.btnInserir.TabIndex = 3;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -156,10 +164,11 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(303, 383);
+            this.btnEditar.Location = new System.Drawing.Point(227, 311);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(127, 43);
-            this.btnEditar.TabIndex = 8;
+            this.btnEditar.Size = new System.Drawing.Size(95, 35);
+            this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -167,10 +176,11 @@
             // btnRemover
             // 
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(480, 383);
+            this.btnRemover.Location = new System.Drawing.Point(360, 311);
+            this.btnRemover.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(127, 43);
-            this.btnRemover.TabIndex = 9;
+            this.btnRemover.Size = new System.Drawing.Size(95, 35);
+            this.btnRemover.TabIndex = 5;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
@@ -178,10 +188,11 @@
             // btnGravar
             // 
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGravar.Location = new System.Drawing.Point(657, 383);
+            this.btnGravar.Location = new System.Drawing.Point(493, 311);
+            this.btnGravar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(127, 43);
-            this.btnGravar.TabIndex = 10;
+            this.btnGravar.Size = new System.Drawing.Size(95, 35);
+            this.btnGravar.TabIndex = 6;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -189,10 +200,11 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(1011, 383);
+            this.btnVoltar.Location = new System.Drawing.Point(758, 311);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(127, 43);
-            this.btnVoltar.TabIndex = 12;
+            this.btnVoltar.Size = new System.Drawing.Size(95, 35);
+            this.btnVoltar.TabIndex = 8;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -200,26 +212,28 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(120, 170);
+            this.txtNome.Location = new System.Drawing.Point(90, 138);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNome.MaxLength = 35;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(458, 28);
-            this.txtNome.TabIndex = 13;
+            this.txtNome.Size = new System.Drawing.Size(344, 24);
+            this.txtNome.TabIndex = 1;
             // 
             // txtUf
             // 
             this.txtUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUf.Location = new System.Drawing.Point(646, 170);
+            this.txtUf.Location = new System.Drawing.Point(484, 138);
+            this.txtUf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUf.MaxLength = 2;
             this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(72, 28);
-            this.txtUf.TabIndex = 14;
+            this.txtUf.Size = new System.Drawing.Size(55, 24);
+            this.txtUf.TabIndex = 2;
             // 
             // frmCidade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 633);
+            this.ClientSize = new System.Drawing.Size(946, 514);
             this.ControlBox = false;
             this.Controls.Add(this.txtUf);
             this.Controls.Add(this.txtNome);
@@ -235,6 +249,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCidade";
             this.Text = "frmCidade";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
