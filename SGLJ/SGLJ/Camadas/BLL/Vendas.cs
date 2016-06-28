@@ -6,7 +6,27 @@ using System.Threading.Tasks;
 
 namespace SGLJ.Camadas.BLL
 {
-    class Vendas
+    public class Vendas
     {
+        public List<Modelo.Vendas> Select()
+        {
+            DAL.Vendas dalVendas = new DAL.Vendas();
+
+            return dalVendas.Select();
+        }
+
+        public Modelo.Vendas SelectById(int id)
+        {
+            DAL.Vendas dalVendas = new DAL.Vendas();
+
+            return dalVendas.SelectById(id);
+        }
+
+        public void Insert(Modelo.Vendas venda)
+        {
+            DAL.Vendas dalVendas = new DAL.Vendas();
+
+            dalVendas.Insert(venda);
+        }
     }
 }

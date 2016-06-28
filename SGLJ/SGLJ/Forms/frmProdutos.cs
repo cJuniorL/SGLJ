@@ -27,8 +27,25 @@ namespace SGLJ.Forms
             cmbTipo.ValueMember = "id";
             cmbTipo.DisplayMember = "descr";
             cmbTipo.DataSource = bllTipo_Produtos.Select();
-            dgvProdutos.DataSource = bllProdutos.Select();
+            carregarGrid();
             habilitarCampos(false);
+        }
+
+        private void carregarGrid()
+        {
+            Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
+            Camadas.BLL.Tipo_Produtos bllTipo_Produtos = new Camadas.BLL.Tipo_Produtos();
+            var dados = from p in bllProdutos.Select()
+                        select new
+                        {
+                            id = p.id,
+                            descricao = p.descr,
+                            tipoProduto = bllTipo_Produtos.SelectById(p.idTipo_Produto).descr,
+                            quantidade = p.quantidade,
+                            valor = p.valor
+                        };
+            dgvProdutos.DataSource = dados.ToList();
+
         }
 
         private void habilitarCampos(bool status)
