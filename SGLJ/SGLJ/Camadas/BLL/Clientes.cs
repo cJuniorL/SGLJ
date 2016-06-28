@@ -19,7 +19,13 @@ namespace SGLJ.Camadas.BLL
             DAL.Clientes dalClientes = new DAL.Clientes();
             return dalClientes.SelectById(id);
         }
+        /*
+        public Modelo.Clientes SelectByNome(string nome)
+        {
 
+            return null;
+        }
+        */
         public void Insert(Modelo.Clientes clientes)
         {
             DAL.Clientes dalClientes = new DAL.Clientes();
