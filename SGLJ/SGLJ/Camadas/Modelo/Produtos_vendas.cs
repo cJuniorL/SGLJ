@@ -10,5 +10,6 @@ namespace SGLJ.Camadas.Modelo
     {
         public int idProdutos { get; set; }
         public int idVendas { get; set; }
+        public int quantidade { get; set; }
     }
 }

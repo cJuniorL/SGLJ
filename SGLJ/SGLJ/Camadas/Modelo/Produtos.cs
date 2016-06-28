@@ -13,5 +13,13 @@ namespace SGLJ.Camadas.Modelo
         public string descr { get; set; }
         public int quantidade { get; set; }
         public float valor { get; set; }
+
+        public virtual string produto
+        {
+            get
+            {
+                return descr + " (" + quantidade + ")";
+            }
+        }
     }
 }

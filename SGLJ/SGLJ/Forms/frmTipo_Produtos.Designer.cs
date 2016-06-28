@@ -89,7 +89,7 @@
             // 
             this.txtDescr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescr.Location = new System.Drawing.Point(187, 153);
-            this.txtDescr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescr.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescr.Name = "txtDescr";
             this.txtDescr.Size = new System.Drawing.Size(336, 30);
             this.txtDescr.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.dgvTipoProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoProdutos.Location = new System.Drawing.Point(191, 399);
-            this.dgvTipoProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTipoProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTipoProdutos.Name = "dgvTipoProdutos";
             this.dgvTipoProdutos.Size = new System.Drawing.Size(879, 185);
             this.dgvTipoProdutos.TabIndex = 5;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 631);
+            this.ClientSize = new System.Drawing.Size(1262, 633);
             this.ControlBox = false;
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCancelar);
@@ -194,9 +194,10 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblTipo_Produtos);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTipo_Produtos";
             this.Text = "Tipo_Produtos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTipo_Produtos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoProdutos)).EndInit();
             this.ResumeLayout(false);
