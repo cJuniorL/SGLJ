@@ -97,7 +97,7 @@ namespace SGLJ.Forms
                     op = 'X';
                     Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
                     bllProdutos.Delete(bllProdutos.SelectById(Convert.ToInt32(lblID.Text)));
-                    dgvProdutos.DataSource = bllProdutos.Select();
+                    carregarGrid();
                     habilitarCampos(false);
                 }
             }
@@ -121,9 +121,8 @@ namespace SGLJ.Forms
                     bllProdutos.Insert(produtos);
                 else
                     bllProdutos.Update(produtos);
-                op = 'X';
                 habilitarCampos(false);
-                dgvProdutos.DataSource = bllProdutos.Select();
+                carregarGrid();
             }
         }
 
@@ -140,12 +139,20 @@ namespace SGLJ.Forms
 
         private void dgvProdutos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dgvProdutos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
             if (dgvProdutos.SelectedRows.Count > 0)
             {
-                lblID.Text = dgvProdutos.SelectedRows[0].Cells["id"].Value.ToString();
-                txtDescr.Text = dgvProdutos.SelectedRows[0].Cells["descr"].Value.ToString();
-                txtQuantidade.Text = dgvProdutos.SelectedRows[0].Cells["quantidade"].Value.ToString();
-                txtValor.Text = dgvProdutos.SelectedRows[0].Cells["valor"].Value.ToString();
+                lblID.Text = dgvProdutos.SelectedRows[0].Cells["ID"].Value.ToString();
+                Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
+                Camadas.Modelo.Produtos produtos = bllProdutos.SelectById(Convert.ToInt32(lblID.Text));
+                cmbTipo.SelectedValue = produtos.idTipo_Produto;
+                txtDescr.Text = produtos.descr;
+                txtQuantidade.Text = Convert.ToString(produtos.quantidade);
+                txtValor.Text = Convert.ToString(produtos.valor);
             }
         }
     }

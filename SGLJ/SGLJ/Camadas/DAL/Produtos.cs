@@ -102,11 +102,13 @@ namespace SGLJ.Camadas.DAL
             }
         }
 
+
         public void Update(Modelo.Produtos produtos)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Update Produtos set descr=@descr, quantidade=@quantidade, valor=@valor where id=@id;";
+            string sql = "Update Produtos set idTipo_Produtos=@idTipo_Produtos, descr=@descr, quantidade=@quantidade, valor=@valor where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", produtos.id);
             cmd.Parameters.AddWithValue("@idTipo_Produtos", produtos.idTipo_Produto);
             cmd.Parameters.AddWithValue("@descr", produtos.descr);
             cmd.Parameters.AddWithValue("@quantidade", produtos.quantidade);
