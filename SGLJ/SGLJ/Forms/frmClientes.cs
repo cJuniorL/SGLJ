@@ -45,7 +45,25 @@ namespace SGLJ.Forms
                             celular = c.celular,
                             cpf = c.cpf,
                             email = c.email
-                         };
+                        };
+            dgvClientes.DataSource = dados.ToList();
+        }
+
+        private void carregarGrid(List<Camadas.Modelo.Clientes> lstClientes)
+        {
+            Camadas.BLL.Cidade bllCidade = new Camadas.BLL.Cidade();
+            var dados = from c in lstClientes.ToList()
+                        select new
+                        {
+                            id = c.id,
+                            nome = c.nome,
+                            cidade = bllCidade.SelectById(c.idCidade).nome,
+                            endereco = c.endereco,
+                            telefone = c.telefone,
+                            celular = c.celular,
+                            cpf = c.cpf,
+                            email = c.email
+                        };
             dgvClientes.DataSource = dados.ToList();
         }
 
@@ -73,7 +91,7 @@ namespace SGLJ.Forms
                 txtEndereco.Text = "";
                 txtCelular.Text = "";
                 txtTelefone.Text = "";
-                cmbCidade.SelectedText = "";
+                cmbCidade.Text = null;
             }
         }
 
@@ -158,12 +176,47 @@ namespace SGLJ.Forms
                 txtCelular.Text = clientes.celular;
                 txtEndereco.Text = clientes.endereco;
                 txtEmail.Text = clientes.email;
-          }
+            }
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            
+            pnlPesquisa.Visible = true;
+            rbtTodos.Checked = true;
+            txtPesquisa.Text = "";
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            pnlPesquisa.Visible = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (rbtTodos.Checked)
+            {
+                carregarGrid();
+            }
+            else
+            {
+                Camadas.BLL.Clientes bllCliente = new Camadas.BLL.Clientes();
+                List<Camadas.Modelo.Clientes> lstCliente = new List<Camadas.Modelo.Clientes>();
+                if (rbtID.Checked)
+                {
+                    lstCliente = bllCliente.lstSelectById(Convert.ToInt32(txtPesquisa.Text));
+                    carregarGrid(lstCliente);
+                }
+                else
+                {
+                    if (rbtNome.Checked)
+                    {
+                        lstCliente = bllCliente.SelectByNome(txtPesquisa.Text);
+                        carregarGrid(lstCliente);
+                    }
+                }
+            }
+        }
+
+
     }
 }

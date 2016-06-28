@@ -19,13 +19,19 @@ namespace SGLJ.Camadas.BLL
             DAL.Clientes dalClientes = new DAL.Clientes();
             return dalClientes.SelectById(id);
         }
-        /*
-        public Modelo.Clientes SelectByNome(string nome)
-        {
 
-            return null;
+        public List<Modelo.Clientes> lstSelectById(int id)
+        {
+            DAL.Clientes dalClientes = new DAL.Clientes();
+            return dalClientes.lstSelectById(id);
         }
-        */
+
+        public List<Modelo.Clientes> SelectByNome(string nome)
+        {
+            DAL.Clientes dalClientes = new DAL.Clientes();
+            return dalClientes.SelectByNome(nome);
+        }
+        
         public void Insert(Modelo.Clientes clientes)
         {
             DAL.Clientes dalClientes = new DAL.Clientes();
@@ -43,5 +49,6 @@ namespace SGLJ.Camadas.BLL
             DAL.Clientes dalClientes = new DAL.Clientes();
             dalClientes.Delete(clientes);
         }
+
     }
 }

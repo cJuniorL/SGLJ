@@ -84,6 +84,44 @@ namespace SGLJ.Camadas.DAL
             return cliente;
         }
 
+
+        public List<Modelo.Clientes> lstSelectById(int id)
+        {
+            List<Modelo.Clientes> lstCliente = new List<Modelo.Clientes>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Clientes where id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    Modelo.Clientes cliente = new Modelo.Clientes();
+                    cliente.id = Convert.ToInt32(reader["id"]);
+                    cliente.idCidade = Convert.ToInt32(reader["idCidade"]);
+                    cliente.nome = reader["nome"].ToString();
+                    cliente.telefone = reader["telefone"].ToString();
+                    cliente.celular = reader["celular"].ToString();
+                    cliente.endereco = reader["endereco"].ToString();
+                    cliente.cpf = reader["cpf"].ToString();
+                    cliente.email = reader["email"].ToString();
+                    lstCliente.Add(cliente);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Deu erro na Seleção de Cliente por ID...");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return lstCliente;
+        }
+
         public void Insert(Modelo.Clientes cliente)
         {
             SqlConnection conexao = new SqlConnection(strCon);
@@ -159,6 +197,42 @@ namespace SGLJ.Camadas.DAL
                 conexao.Close();
             }
 
+        }
+        public List<Modelo.Clientes> SelectByNome(string nome)
+        {
+            List<Modelo.Clientes> lstCliente = new List<Modelo.Clientes>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Clientes where (nome like @nome);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@nome", nome.Trim() + "%");
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    Modelo.Clientes cliente = new Modelo.Clientes();
+                    cliente.id = Convert.ToInt32(reader["id"]);
+                    cliente.idCidade = Convert.ToInt32(reader["idCidade"]);
+                    cliente.nome = reader["nome"].ToString();
+                    cliente.telefone = reader["telefone"].ToString();
+                    cliente.celular = reader["celular"].ToString();
+                    cliente.endereco = reader["endereco"].ToString();
+                    cliente.cpf = reader["cpf"].ToString();
+                    cliente.email = reader["email"].ToString();
+                    lstCliente.Add(cliente);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Deu erro na Seleção de Clientes por Nome...");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return lstCliente;
         }
     }
 }
