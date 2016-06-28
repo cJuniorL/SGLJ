@@ -78,6 +78,38 @@ namespace SGLJ.Camadas.DAL
             return vendas;
         }
 
+        public Modelo.Vendas SelectByTime(DateTime time)
+        {
+            Modelo.Vendas vendas = new Modelo.Vendas();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Vendas where data=@data;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@data", time);
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    vendas.id = Convert.ToInt32(reader["id"]);
+                    vendas.idVendedor = Convert.ToInt32(reader["idVendedores"]);
+                    vendas.idCliente = Convert.ToInt32(reader["idClientes"]);
+                    vendas.data = Convert.ToDateTime(reader["data"]);
+                    vendas.total = Convert.ToSingle(reader["total"]);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Deu erro na Seleção de Vendas por ID...");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return vendas;
+        }
+
         public void Insert(Modelo.Vendas vendas)
         {
             SqlConnection conexao = new SqlConnection(strCon);

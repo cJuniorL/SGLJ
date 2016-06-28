@@ -48,6 +48,7 @@ namespace SGLJ.Forms
             btnNovaVenda.Enabled = !status;
             btnFinalizarVenda.Enabled = status;
             btnProcurarVenda.Enabled = !status;
+            btnCancelarVenda.Enabled = status;
             if (op != 'V')
             {
                 lblID.Text = "-1";
@@ -144,7 +145,7 @@ namespace SGLJ.Forms
             Camadas.Modelo.Produtos produto = new Camadas.Modelo.Produtos();
             Camadas.BLL.Produtos bllProduto = new Camadas.BLL.Produtos();
             venda.idCliente = Convert.ToInt32(cmbCliente.SelectedValue);
-            venda.idVendedor = Convert.ToInt32(cmbProduto.SelectedValue);
+            venda.idVendedor = Convert.ToInt32(cmbVendedor.SelectedValue);
             venda.total = Convert.ToSingle(lblTotal.Text.Replace("R", "").Replace("$", ""));
             venda.data = dtpData.Value;
             bllVendas.Insert(venda);
@@ -167,6 +168,8 @@ namespace SGLJ.Forms
         private void btnProcurarVenda_Click(object sender, EventArgs e)
         {
             carregarDadosVenda();
+            btnNovaVenda.Enabled = false;
+            dgvVendas.Visible = true;
         }
 
         private void dgvVendas_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -192,7 +195,14 @@ namespace SGLJ.Forms
                                 valorT = bllProduto.SelectById(p.idProdutos).valor * p.quantidade
                             };
                 dgvCompras.DataSource = dados.ToList();
+                btnNovaVenda.Enabled = true;
+                dgvVendas.Visible = false;
             }
+        }
+
+        private void btnCancelarVenda_Click(object sender, EventArgs e)
+        {
+            habilitarCampos(false);
         }
     }
 }

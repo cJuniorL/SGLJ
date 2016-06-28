@@ -53,6 +53,7 @@
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancelarVenda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +71,7 @@
             // btnNovaVenda
             // 
             this.btnNovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovaVenda.Location = new System.Drawing.Point(796, 37);
+            this.btnNovaVenda.Location = new System.Drawing.Point(661, 37);
             this.btnNovaVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNovaVenda.Name = "btnNovaVenda";
             this.btnNovaVenda.Size = new System.Drawing.Size(135, 74);
@@ -270,6 +271,7 @@
             this.dgvVendas.RowTemplate.Height = 24;
             this.dgvVendas.Size = new System.Drawing.Size(500, 124);
             this.dgvVendas.TabIndex = 22;
+            this.dgvVendas.Visible = false;
             this.dgvVendas.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVendas_CellMouseDoubleClick);
             // 
             // ID
@@ -302,12 +304,25 @@
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
             // 
+            // btnCancelarVenda
+            // 
+            this.btnCancelarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarVenda.Location = new System.Drawing.Point(806, 37);
+            this.btnCancelarVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelarVenda.Name = "btnCancelarVenda";
+            this.btnCancelarVenda.Size = new System.Drawing.Size(135, 74);
+            this.btnCancelarVenda.TabIndex = 23;
+            this.btnCancelarVenda.Text = "Cancelar Venda";
+            this.btnCancelarVenda.UseVisualStyleBackColor = true;
+            this.btnCancelarVenda.Click += new System.EventHandler(this.btnCancelarVenda_Click);
+            // 
             // frmVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 633);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCancelarVenda);
             this.Controls.Add(this.dgvVendas);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtQnt);
@@ -367,5 +382,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Button btnCancelarVenda;
     }
 }

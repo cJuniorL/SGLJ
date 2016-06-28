@@ -22,6 +22,13 @@ namespace SGLJ.Camadas.BLL
             return dalVendas.SelectById(id);
         }
 
+        public Modelo.Vendas Select(DateTime time)
+        {
+            DAL.Vendas dalVendas = new DAL.Vendas();
+
+            return dalVendas.SelectByTime(time);
+        }
+
         public void Insert(Modelo.Vendas venda)
         {
             DAL.Vendas dalVendas = new DAL.Vendas();
