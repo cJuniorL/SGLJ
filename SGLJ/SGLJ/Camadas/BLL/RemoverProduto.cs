@@ -14,7 +14,14 @@ namespace SGLJ.Camadas.BLL
             Modelo.Produtos produto = bllProdutos.SelectById(idProd);
             produto.quantidade -= quantidade;
             bllProdutos.Update(produto);
+        }
 
+        static public void adicionar(int idProd, int quantidade)
+        {
+            Produtos bllProdutos = new Produtos();
+            Modelo.Produtos produto = bllProdutos.SelectById(idProd);
+            produto.quantidade += quantidade;
+            bllProdutos.Update(produto);
         }
     }
 }

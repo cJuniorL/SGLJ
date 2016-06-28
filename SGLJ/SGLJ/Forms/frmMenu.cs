@@ -75,5 +75,12 @@ namespace SGLJ.Forms
         {
             this.Close();
         }
+
+        private void adicionarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdicionarProduto frmProduto = new frmAdicionarProduto();
+            frmProduto.MdiParent = this;
+            frmProduto.Show();
+        }
     }
 }
