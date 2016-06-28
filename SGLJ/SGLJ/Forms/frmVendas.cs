@@ -186,7 +186,8 @@ namespace SGLJ.Forms
                 dtpData.Value = venda.data;
                 Camadas.BLL.Produtos_Vendas bllProdutosVendas = new Camadas.BLL.Produtos_Vendas();
                 Camadas.BLL.Produtos bllProduto = new Camadas.BLL.Produtos();
-                var dados = from p in bllProdutosVendas.SelectByVenda(venda.id)
+                List<Camadas.Modelo.Produtos_Vendas> lstProdutoVendas = bllProdutosVendas.SelectByVenda(venda.id);
+                var dados = from p in lstProdutoVendas
                             select new
                             {
                                 descr = bllProduto.SelectById(p.idProdutos).descr,
@@ -203,6 +204,11 @@ namespace SGLJ.Forms
         private void btnCancelarVenda_Click(object sender, EventArgs e)
         {
             habilitarCampos(false);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

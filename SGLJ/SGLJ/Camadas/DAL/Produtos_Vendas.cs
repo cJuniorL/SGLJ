@@ -46,9 +46,9 @@ namespace SGLJ.Camadas.DAL
             try
             {
                 SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                Modelo.Produtos_Vendas produtoVendas = new Modelo.Produtos_Vendas();
                 while (reader.Read())
                 {
+                    Modelo.Produtos_Vendas produtoVendas = new Modelo.Produtos_Vendas();
                     produtoVendas.idProdutos = Convert.ToInt32(reader["idProdutos"]);
                     produtoVendas.idVendas = Convert.ToInt32(reader["idVendas"]);
                     produtoVendas.quantidade = Convert.ToInt32(reader["quantidade"]);

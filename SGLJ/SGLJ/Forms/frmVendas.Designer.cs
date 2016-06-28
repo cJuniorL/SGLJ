@@ -54,6 +54,7 @@
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelarVenda = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
             this.SuspendLayout();
@@ -316,12 +317,25 @@
             this.btnCancelarVenda.UseVisualStyleBackColor = true;
             this.btnCancelarVenda.Click += new System.EventHandler(this.btnCancelarVenda_Click);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(1080, 494);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(135, 74);
+            this.btnVoltar.TabIndex = 24;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 633);
             this.ControlBox = false;
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCancelarVenda);
             this.Controls.Add(this.dgvVendas);
             this.Controls.Add(this.btnAdicionar);
@@ -383,5 +397,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Button btnCancelarVenda;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
