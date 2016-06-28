@@ -30,7 +30,7 @@
         {
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnVendedores = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.btnVendedores);
             this.splitContainer1.Panel1.Controls.Add(this.btnVendas);
             this.splitContainer1.Panel1.Controls.Add(this.btnClientes);
             this.splitContainer1.Panel1.Controls.Add(this.btnProdutos);
@@ -66,23 +66,26 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.crystalReportViewer1);
             this.splitContainer1.Size = new System.Drawing.Size(941, 513);
-            this.splitContainer1.SplitterDistance = 187;
+            this.splitContainer1.SplitterDistance = 128;
             this.splitContainer1.TabIndex = 1;
             // 
-            // button4
+            // btnVendedores
             // 
-            this.button4.Location = new System.Drawing.Point(45, 238);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnVendedores.Font = new System.Drawing.Font("PT Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendedores.Location = new System.Drawing.Point(9, 12);
+            this.btnVendedores.Name = "btnVendedores";
+            this.btnVendedores.Size = new System.Drawing.Size(109, 46);
+            this.btnVendedores.TabIndex = 3;
+            this.btnVendedores.Text = "Vendedores";
+            this.btnVendedores.UseVisualStyleBackColor = true;
+            this.btnVendedores.Click += new System.EventHandler(this.btnVendedores_Click);
             // 
             // btnVendas
             // 
-            this.btnVendas.Location = new System.Drawing.Point(45, 180);
+            this.btnVendas.Font = new System.Drawing.Font("PT Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendas.Location = new System.Drawing.Point(9, 180);
             this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Size = new System.Drawing.Size(75, 23);
+            this.btnVendas.Size = new System.Drawing.Size(109, 46);
             this.btnVendas.TabIndex = 2;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
@@ -90,9 +93,10 @@
             // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(45, 122);
+            this.btnClientes.Font = new System.Drawing.Font("PT Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Location = new System.Drawing.Point(9, 122);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(75, 23);
+            this.btnClientes.Size = new System.Drawing.Size(109, 46);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
@@ -100,9 +104,10 @@
             // 
             // btnProdutos
             // 
-            this.btnProdutos.Location = new System.Drawing.Point(45, 64);
+            this.btnProdutos.Font = new System.Drawing.Font("PT Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProdutos.Location = new System.Drawing.Point(9, 64);
             this.btnProdutos.Name = "btnProdutos";
-            this.btnProdutos.Size = new System.Drawing.Size(75, 23);
+            this.btnProdutos.Size = new System.Drawing.Size(109, 46);
             this.btnProdutos.TabIndex = 0;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
@@ -116,8 +121,9 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(750, 513);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(809, 513);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // frmRel
             // 
@@ -141,7 +147,7 @@
 
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnVendedores;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnProdutos;

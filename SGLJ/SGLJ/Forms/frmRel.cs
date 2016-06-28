@@ -46,5 +46,25 @@ namespace SGLJ.Forms
             oRptVendas.SetDataSource(dsSglj);
             crystalReportViewer1.ReportSource = oRptVendas;
         }
+
+        private void btnVendedores_Click(object sender, EventArgs e)
+        {
+            Reports.relVendedores oRptVendedores = new Reports.relVendedores();
+            dtsSGLJ dsSglj = new dtsSGLJ();
+            dtsSGLJTableAdapters.VendedoresTableAdapter taVendedores = new dtsSGLJTableAdapters.VendedoresTableAdapter();
+            taVendedores.Fill(dsSglj.Vendedores);
+            oRptVendedores.SetDataSource(dsSglj);
+            crystalReportViewer1.ReportSource = oRptVendedores;
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+            Reports.relProdutos oRptProd = new Reports.relProdutos();
+            dtsSGLJ dsSglj = new dtsSGLJ();
+            dtsSGLJTableAdapters.ProdutosTableAdapter taProd = new dtsSGLJTableAdapters.ProdutosTableAdapter();
+            taProd.Fill(dsSglj.Produtos);
+            oRptProd.SetDataSource(dsSglj);
+            crystalReportViewer1.ReportSource = oRptProd;
+        }
     }
 }
