@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camadas\BLL\RemoverProduto.cs" />
     <Compile Include="Camadas\BLL\Cidade.cs" />
     <Compile Include="Camadas\BLL\Clientes.cs" />
     <Compile Include="Camadas\BLL\Produtos.cs" />

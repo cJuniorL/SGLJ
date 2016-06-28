@@ -142,7 +142,6 @@ namespace SGLJ.Forms
             Camadas.Modelo.Vendas venda = new Camadas.Modelo.Vendas();
             Camadas.BLL.Vendas bllVendas = new Camadas.BLL.Vendas();
             Camadas.BLL.Produtos_Vendas bllProdutosVendas = new Camadas.BLL.Produtos_Vendas();
-            Camadas.Modelo.Produtos produto = new Camadas.Modelo.Produtos();
             Camadas.BLL.Produtos bllProduto = new Camadas.BLL.Produtos();
             venda.idCliente = Convert.ToInt32(cmbCliente.SelectedValue);
             venda.idVendedor = Convert.ToInt32(cmbVendedor.SelectedValue);
@@ -155,9 +154,7 @@ namespace SGLJ.Forms
             produtosVendas.idVendas = venda.id;
             foreach (Camadas.Modelo.Produtos_Vendas produtosVendasList in lstCarrinho)
             {
-                produto = bllProduto.SelectById(produtosVendasList.idProdutos);
-                produto.quantidade -= produtosVendasList.quantidade;
-                bllProduto.Update(produto);
+                Camadas.BLL.RemoverProduto.remover(produtosVendasList.idProdutos, produtosVendasList.quantidade);
                 produtosVendas.idProdutos = produtosVendasList.idProdutos;
                 produtosVendas.quantidade = produtosVendasList.quantidade;
                 bllProdutosVendas.Insert(produtosVendas);

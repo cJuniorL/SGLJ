@@ -170,7 +170,7 @@
             this.dtpData.Location = new System.Drawing.Point(165, 215);
             this.dtpData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(441, 32);
+            this.dtpData.Size = new System.Drawing.Size(474, 32);
             this.dtpData.TabIndex = 12;
             // 
             // dgvCompras
@@ -320,7 +320,7 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(1080, 494);
+            this.btnVoltar.Location = new System.Drawing.Point(1082, 518);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(135, 74);
