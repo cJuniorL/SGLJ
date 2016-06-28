@@ -160,5 +160,10 @@ namespace SGLJ.Forms
                 txtEmail.Text = clientes.email;
           }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
