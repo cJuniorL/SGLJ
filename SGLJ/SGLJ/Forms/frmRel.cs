@@ -19,22 +19,32 @@ namespace SGLJ.Forms
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            Reports.relProdutos oRpt = new Reports.relProdutos();
+            Reports.relProdutos oRptProd = new Reports.relProdutos();
             dtsSGLJ dsSglj = new dtsSGLJ();
             dtsSGLJTableAdapters.ProdutosTableAdapter taProd = new dtsSGLJTableAdapters.ProdutosTableAdapter();
             taProd.Fill(dsSglj.Produtos);
-            oRpt.SetDataSource(dsSglj);
-            crystalReportViewer1.ReportSource = oRpt;
+            oRptProd.SetDataSource(dsSglj);
+            crystalReportViewer1.ReportSource = oRptProd;
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Reports.relClientes oRpt = new Reports.relClientes();
+            Reports.relClientes oRptCli = new Reports.relClientes();
             dtsSGLJ dsSglj = new dtsSGLJ();
             dtsSGLJTableAdapters.ClientesTableAdapter taCli = new dtsSGLJTableAdapters.ClientesTableAdapter();
             taCli.Fill(dsSglj.Clientes);
-            oRpt.SetDataSource(dsSglj);
-            crystalReportViewer1.ReportSource = oRpt;
+            oRptCli.SetDataSource(dsSglj);
+            crystalReportViewer1.ReportSource = oRptCli;
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            Reports.relVendas oRptVendas = new Reports.relVendas();
+            dtsSGLJ dsSglj = new dtsSGLJ();
+            dtsSGLJTableAdapters.VendasTableAdapter taVendas = new dtsSGLJTableAdapters.VendasTableAdapter();
+            taVendas.Fill(dsSglj.Vendas);
+            oRptVendas.SetDataSource(dsSglj);
+            crystalReportViewer1.ReportSource = oRptVendas;
         }
     }
 }
