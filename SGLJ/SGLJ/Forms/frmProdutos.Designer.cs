@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtDescr = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -228,8 +229,9 @@
             this.txtValor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValor.MaxLength = 10;
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(72, 28);
+            this.txtValor.Size = new System.Drawing.Size(176, 28);
             this.txtValor.TabIndex = 30;
+            this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
             // label7
             // 
@@ -257,12 +259,14 @@
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Width = 40;
             // 
             // Descriccao
             // 
             this.Descriccao.DataPropertyName = "descricao";
             this.Descriccao.HeaderText = "Descrição";
             this.Descriccao.Name = "Descriccao";
+            this.Descriccao.Width = 200;
             // 
             // Nome
             // 
@@ -270,6 +274,7 @@
             this.Nome.HeaderText = "Tipo do Produto";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
+            this.Nome.Width = 200;
             // 
             // UF
             // 
@@ -281,6 +286,9 @@
             // valor
             // 
             this.valor.DataPropertyName = "valor";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.valor.DefaultCellStyle = dataGridViewCellStyle1;
             this.valor.HeaderText = "Valor";
             this.valor.Name = "valor";
             // 

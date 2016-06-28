@@ -116,7 +116,7 @@ namespace SGLJ.Forms
                 produtos.idTipo_Produto = Convert.ToInt32(cmbTipo.SelectedValue);
                 produtos.descr = txtDescr.Text;
                 produtos.quantidade = Convert.ToInt32(txtQuantidade.Text);
-                produtos.valor = Convert.ToSingle(txtValor.Text);
+                produtos.valor = Convert.ToSingle(txtValor.Text.Replace("R","").Replace("$",""));
                 if (op == 'I')
                     bllProdutos.Insert(produtos);
                 else
@@ -152,7 +152,19 @@ namespace SGLJ.Forms
                 cmbTipo.SelectedValue = produtos.idTipo_Produto;
                 txtDescr.Text = produtos.descr;
                 txtQuantidade.Text = Convert.ToString(produtos.quantidade);
-                txtValor.Text = Convert.ToString(produtos.valor);
+                txtValor.Text = String.Format("{0:C2}",Convert.ToDouble(produtos.valor));
+            }
+        }
+
+        private void txtValor_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                txtValor.Text = String.Format("{0:C2}", Convert.ToDouble(txtValor.Text.Replace("R", "").Replace("$", "")));
+            }
+            catch
+            {
+                txtValor.Text = "";
             }
         }
     }

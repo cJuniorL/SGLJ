@@ -63,7 +63,7 @@
             // btnNovaVenda
             // 
             this.btnNovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovaVenda.Location = new System.Drawing.Point(796, 32);
+            this.btnNovaVenda.Location = new System.Drawing.Point(796, 37);
             this.btnNovaVenda.Name = "btnNovaVenda";
             this.btnNovaVenda.Size = new System.Drawing.Size(135, 74);
             this.btnNovaVenda.TabIndex = 2;
@@ -74,7 +74,7 @@
             // btnProcurarVenda
             // 
             this.btnProcurarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcurarVenda.Location = new System.Drawing.Point(1097, 32);
+            this.btnProcurarVenda.Location = new System.Drawing.Point(1097, 37);
             this.btnProcurarVenda.Name = "btnProcurarVenda";
             this.btnProcurarVenda.Size = new System.Drawing.Size(135, 74);
             this.btnProcurarVenda.TabIndex = 3;
@@ -186,7 +186,7 @@
             // btnFinalizarVenda
             // 
             this.btnFinalizarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarVenda.Location = new System.Drawing.Point(946, 32);
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(946, 37);
             this.btnFinalizarVenda.Name = "btnFinalizarVenda";
             this.btnFinalizarVenda.Size = new System.Drawing.Size(135, 74);
             this.btnFinalizarVenda.TabIndex = 16;
@@ -206,7 +206,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(83, 262);
+            this.label8.Location = new System.Drawing.Point(75, 262);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 24);
             this.label8.TabIndex = 18;
@@ -215,7 +215,7 @@
             // txtQnt
             // 
             this.txtQnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQnt.Location = new System.Drawing.Point(437, 259);
+            this.txtQnt.Location = new System.Drawing.Point(439, 259);
             this.txtQnt.Name = "txtQnt";
             this.txtQnt.Size = new System.Drawing.Size(90, 28);
             this.txtQnt.TabIndex = 20;
@@ -225,7 +225,7 @@
             // btnAdicionar
             // 
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Location = new System.Drawing.Point(533, 257);
+            this.btnAdicionar.Location = new System.Drawing.Point(535, 257);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(113, 33);
             this.btnAdicionar.TabIndex = 21;

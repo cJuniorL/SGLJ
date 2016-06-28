@@ -72,21 +72,24 @@ namespace SGLJ.Forms
 
         private void txtQnt_Leave(object sender, EventArgs e)
         {
-            Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
-            int qnt = bllProdutos.SelectById(Convert.ToInt32(cmbProduto.ValueMember)).quantidade;
-            if (Convert.ToInt32(txtQnt.Text) > qnt)
-                txtQnt.Text = "";
+            if (txtQnt.Text != null)
+            {
+                Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
+                int qnt = bllProdutos.SelectById(Convert.ToInt32(cmbProduto.SelectedValue)).quantidade;
+                if (Convert.ToInt32(txtQnt.Text) > qnt)
+                    txtQnt.Text = "";
+            }
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             Camadas.BLL.Produtos bllProdutos = new Camadas.BLL.Produtos();
-            Camadas.Modelo.Produtos produto = bllProdutos.SelectById(Convert.ToInt32(cmbProduto.ValueMember));
-            if (lblTotal.Text != null)
-                lblTotal.Text = String.Format("{0:C2}", Convert.ToSingle(lblTotal.Text) + produto.valor * Convert.ToInt32(txtQnt.Text));
+            Camadas.Modelo.Produtos produto = bllProdutos.SelectById(Convert.ToInt32(cmbProduto.SelectedValue));
+            if (lblTotal.Text != "")
+                lblTotal.Text = String.Format("{0:C2}", Convert.ToSingle(lblTotal.Text.Replace("R","").Replace("$","")) + produto.valor * Convert.ToInt32(txtQnt.Text));
             else
                 lblTotal.Text = String.Format("{0:C2}", produto.valor * Convert.ToInt32(txtQnt.Text));
-         lstCarrinho.Add(produto);
+            lstCarrinho.Add(produto);
             carregarGrid();
         }
 
