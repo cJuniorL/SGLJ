@@ -135,6 +135,7 @@ namespace SGLJ.Forms
                             valorT = bllProduto.SelectById(p.idProdutos).valor * p.quantidade
                         };
             dgvCompras.DataSource = dados.ToList();
+            //Linq
         }
 
         private void btnFinalizarVenda_Click(object sender, EventArgs e)

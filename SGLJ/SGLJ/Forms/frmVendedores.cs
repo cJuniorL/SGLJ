@@ -55,7 +55,7 @@ namespace SGLJ.Forms
                 txtEndereco.Text = "";
                 txtCelular.Text = "";
                 txtTelefone.Text = "";
-                cmbCidade.SelectedText = "";
+                cmbCidade.Text = null;
             }
 
         }

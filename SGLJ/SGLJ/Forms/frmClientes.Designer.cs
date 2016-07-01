@@ -61,14 +61,14 @@
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlPesquisa = new System.Windows.Forms.Panel();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.rbtTodos = new System.Windows.Forms.RadioButton();
-            this.rbtID = new System.Windows.Forms.RadioButton();
-            this.rbtNome = new System.Windows.Forms.RadioButton();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.rbtNome = new System.Windows.Forms.RadioButton();
+            this.rbtID = new System.Windows.Forms.RadioButton();
+            this.rbtTodos = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.pnlPesquisa.SuspendLayout();
             this.SuspendLayout();
@@ -395,87 +395,11 @@
             this.pnlPesquisa.Controls.Add(this.rbtTodos);
             this.pnlPesquisa.Controls.Add(this.label10);
             this.pnlPesquisa.Location = new System.Drawing.Point(876, 41);
-            this.pnlPesquisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPesquisa.Name = "pnlPesquisa";
             this.pnlPesquisa.Size = new System.Drawing.Size(292, 294);
             this.pnlPesquisa.TabIndex = 30;
             this.pnlPesquisa.Visible = false;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(1102, 395);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(116, 42);
-            this.btnPesquisar.TabIndex = 14;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(16, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(176, 44);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Pesquisa";
-            // 
-            // rbtTodos
-            // 
-            this.rbtTodos.AutoSize = true;
-            this.rbtTodos.Location = new System.Drawing.Point(38, 83);
-            this.rbtTodos.Name = "rbtTodos";
-            this.rbtTodos.Size = new System.Drawing.Size(69, 21);
-            this.rbtTodos.TabIndex = 33;
-            this.rbtTodos.TabStop = true;
-            this.rbtTodos.Text = "Todos";
-            this.rbtTodos.UseVisualStyleBackColor = true;
-            // 
-            // rbtID
-            // 
-            this.rbtID.AutoSize = true;
-            this.rbtID.Location = new System.Drawing.Point(38, 111);
-            this.rbtID.Name = "rbtID";
-            this.rbtID.Size = new System.Drawing.Size(42, 21);
-            this.rbtID.TabIndex = 34;
-            this.rbtID.TabStop = true;
-            this.rbtID.Text = "ID";
-            this.rbtID.UseVisualStyleBackColor = true;
-            // 
-            // rbtNome
-            // 
-            this.rbtNome.AutoSize = true;
-            this.rbtNome.Location = new System.Drawing.Point(38, 138);
-            this.rbtNome.Name = "rbtNome";
-            this.rbtNome.Size = new System.Drawing.Size(66, 21);
-            this.rbtNome.TabIndex = 35;
-            this.rbtNome.TabStop = true;
-            this.rbtNome.Text = "Nome";
-            this.rbtNome.UseVisualStyleBackColor = true;
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisa.Location = new System.Drawing.Point(51, 180);
-            this.txtPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(173, 28);
-            this.txtPesquisa.TabIndex = 32;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(24, 223);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(127, 43);
-            this.btnBuscar.TabIndex = 32;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnFechar
             // 
@@ -489,10 +413,87 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(24, 223);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(127, 43);
+            this.btnBuscar.TabIndex = 32;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(51, 180);
+            this.txtPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(173, 28);
+            this.txtPesquisa.TabIndex = 32;
+            // 
+            // rbtNome
+            // 
+            this.rbtNome.AutoSize = true;
+            this.rbtNome.Location = new System.Drawing.Point(38, 138);
+            this.rbtNome.Name = "rbtNome";
+            this.rbtNome.Size = new System.Drawing.Size(66, 21);
+            this.rbtNome.TabIndex = 35;
+            this.rbtNome.TabStop = true;
+            this.rbtNome.Text = "Nome";
+            this.rbtNome.UseVisualStyleBackColor = true;
+            // 
+            // rbtID
+            // 
+            this.rbtID.AutoSize = true;
+            this.rbtID.Location = new System.Drawing.Point(38, 111);
+            this.rbtID.Name = "rbtID";
+            this.rbtID.Size = new System.Drawing.Size(42, 21);
+            this.rbtID.TabIndex = 34;
+            this.rbtID.TabStop = true;
+            this.rbtID.Text = "ID";
+            this.rbtID.UseVisualStyleBackColor = true;
+            // 
+            // rbtTodos
+            // 
+            this.rbtTodos.AutoSize = true;
+            this.rbtTodos.Location = new System.Drawing.Point(38, 83);
+            this.rbtTodos.Name = "rbtTodos";
+            this.rbtTodos.Size = new System.Drawing.Size(69, 21);
+            this.rbtTodos.TabIndex = 33;
+            this.rbtTodos.TabStop = true;
+            this.rbtTodos.Text = "Todos";
+            this.rbtTodos.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(176, 44);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Pesquisa";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(1102, 395);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(116, 42);
+            this.btnPesquisar.TabIndex = 14;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(1261, 633);
             this.ControlBox = false;
             this.Controls.Add(this.btnPesquisar);

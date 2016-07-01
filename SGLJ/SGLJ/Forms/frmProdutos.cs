@@ -63,7 +63,7 @@ namespace SGLJ.Forms
             if (op != 'E')
             {
                 lblID.Text = "-1";
-                cmbTipo.Text = "";
+                cmbTipo.Text = null;
                 txtDescr.Text = "";
                 txtQuantidade.Text = "";
                 txtValor.Text = "";
