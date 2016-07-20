@@ -56,7 +56,7 @@
             this.stpMenu.Location = new System.Drawing.Point(0, 0);
             this.stpMenu.Name = "stpMenu";
             this.stpMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.stpMenu.Size = new System.Drawing.Size(1259, 38);
+            this.stpMenu.Size = new System.Drawing.Size(1258, 38);
             this.stpMenu.TabIndex = 0;
             this.stpMenu.Text = "menuStrip1";
             // 
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 649);
+            this.ClientSize = new System.Drawing.Size(1258, 649);
             this.Controls.Add(this.stpMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
